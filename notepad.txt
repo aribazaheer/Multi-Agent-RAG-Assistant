@@ -1,0 +1,86 @@
+# Day 15 - Multi-Agent RAG Main Application
+
+from crewai import Crew, Process
+
+from rag_crew import (
+    get_relevant_context,
+    create_fact_check_task,
+    create_answer_task
+)
+
+from guardrail import is_relevant_context, refusal_message
+from memory import save_conversation
+
+
+def main():
+
+    print("=" * 60)
+    print("DAY 15 - MULTI-AGENT RAG")
+    print("=" * 60)
+
+    question = input("\nEnter your question: ")
+
+    print("\n[1] Retrieving documents...")
+
+    context, results = get_relevant_context(
+        question,
+        k=3
+    )
+
+    if not is_relevant_context(results):
+        print("\n" + refusal_message())
+        return
+
+    print("[✓] Relevant documents found.")
+
+    print("\n[2] Running Fact Checker...")
+
+    fact_check_task = create_fact_check_task(
+        question,
+        context
+    )
+
+    fact_checker_crew = Crew(
+        agents=[fact_check_task.agent],
+        tasks=[fact_check_task],
+        process=Process.sequential,
+        verbose=True
+    )
+
+    fact_check_result = fact_checker_crew.kickoff()
+
+    print("\n[✓] Fact checking completed.")
+
+    print("\n[3] Running Answer Writer...")
+
+    answer_task = create_answer_task(
+        question,
+        context,
+        fact_check_result
+    )
+
+    answer_writer_crew = Crew(
+        agents=[answer_task.agent],
+        tasks=[answer_task],
+        process=Process.sequential,
+        verbose=True
+    )
+
+    final_answer = answer_writer_crew.kickoff()
+
+    print("\n" + "=" * 60)
+    print("FINAL ANSWER")
+    print("=" * 60)
+
+    print(final_answer)
+
+    save_conversation(
+        question,
+        final_answer
+    )
+
+    print("\n[✓] Conversation saved to memory.")
+
+
+if __name__ == "__main__":
+    main()

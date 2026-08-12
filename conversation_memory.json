@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What is Agentic AI?",
+        "answer": "Agentic AI refers to AI systems that can plan and perform tasks."
+    },
+    {
+        "question": "what is agentic ai?",
+        "answer": "The verified information from the retrieved documents states that Agentic AI refers to artificial intelligence systems that can plan, make decisions, use tools, and perform multiple steps to achieve a goal. Unlike traditional chatbots, agentic systems can break complex tasks into smaller steps and execute those steps. Common components of an agentic AI system include an AI model, tools, memory, planning, and feedback mechanisms. However, the retrieved context does not provide sufficient evidence to support the claim that Agentic AI can be used for research, automation, customer support, software development, data analysis, and document processing. \n\nSource: data\\document1.txt"
+    },
+    {
+        "question": "what is generative ai ?",
+        "answer": "The definition of Generative AI is not explicitly stated in the provided documents. However, based on the information about Agentic AI, which refers to artificial intelligence systems that can plan, make decisions, use tools, and perform multiple steps to achieve a goal, it can be inferred that Generative AI may be a subset or related concept within Agentic AI.\n\nAccording to the document context, Agentic AI can be used for research, automation, customer support, software development, data analysis, and document processing. While the documents do not provide a direct definition of Generative AI, they do offer insights into the capabilities and applications of Agentic AI.\n\nSince the provided documents focus on Agentic AI, it is unclear whether Generative AI is explicitly mentioned or if it falls under the broader category of Agentic AI. Further investigation would be necessary to determine the specific nature and scope of Generative AI."
+    },
+    {
+        "question": "main role in agentic ai ",
+        "answer": "The main role of Agentic AI is to plan, make decisions, use tools, and perform multiple steps to achieve a goal. Unlike traditional chatbots, agentic systems can break complex tasks into smaller steps and execute those steps. Common components of an agentic AI system include an AI model, tools, memory, planning, and feedback mechanisms."
+    },
+    {
+        "question": "What is the main purpose of the documents?",
+        "answer": "The main purpose of the documents appears to be an overview of Agentic AI and its capabilities. According to Source: data\\document1.txt, Agentic AI can be used for research, automation, customer support, software development, data analysis, and document processing. Additionally, the same source is referenced multiple times with high similarity scores (1.0112), which suggests that it may contain repeated or redundant information.\n\nThe other documents provided do not add significantly new information about the main purpose of the documents. Source: data\\document3.md mentions Multi-Agent Systems, but this appears to be a separate concept related to Agentic AI rather than a direct explanation of its purpose.\n\nTherefore, based on the information available in the retrieved documents, it is unclear what the main purpose of the documents is beyond providing general information about Agentic AI and its applications."
+    }
+]

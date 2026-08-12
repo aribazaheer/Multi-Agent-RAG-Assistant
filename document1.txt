@@ -1,0 +1,14 @@
+Agentic AI
+
+Agentic AI refers to artificial intelligence systems that can plan,
+make decisions, use tools, and perform multiple steps to achieve a goal.
+
+Unlike a traditional chatbot that mainly responds to a single prompt,
+an agentic system can break a complex task into smaller steps and
+execute those steps.
+
+Common components of an agentic AI system include an AI model,
+tools, memory, planning, and feedback mechanisms.
+
+Agentic AI can be used for research, automation, customer support,
+software development, data analysis, and document processing.
